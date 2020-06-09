@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DataAccessPGProvider": "Server=localhost;User Id=admin;Password=password;Database=BDMPGDatabase;Port=3306;"
+  }
+}
