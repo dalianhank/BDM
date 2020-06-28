@@ -17,7 +17,7 @@ namespace BDM.Lambda
         {
             Configuration = configuration;
         }
-
+        // readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
 
 
@@ -35,6 +35,9 @@ namespace BDM.Lambda
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
             services.AddDbContext<BDMEntitiesDB>(options => options.UseNpgsql("Server=localhost;User Id=tdadmin;Password=password;Database=BDMPGDatabase;Port=3306;"));
+            services.AddCors();          
+            
+            services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,17 +47,25 @@ namespace BDM.Lambda
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseHsts();
+            }
+            
+            app.UseCors(options => options.WithOrigins("http://localhost:4200").AllowAnyMethod());  //add consume app domain here
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();
+            //app.UseRouting();
+            
+            app.UseMvc();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            // app.UseEndpoints(endpoints =>
+            // {
+            //     endpoints.MapControllers();
+            // });
         }
     }
 }

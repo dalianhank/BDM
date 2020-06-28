@@ -2,8 +2,7 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "/Users/gefeng/.dotnet/store/|arch|/|tfm|",
-      "/Users/gefeng/.nuget/packages",
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      "/Users/gefeng/.nuget/packages"
     ]
   }
 }

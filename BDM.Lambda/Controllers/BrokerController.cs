@@ -14,7 +14,7 @@ namespace BDM.Lambda.Controllers
             _brokerService = brokerService;
         }
 
-        [HttpGet]
+        [HttpGet]        
         public IActionResult GetBrokerList()
         {
             var result = _brokerService.GetBrokerList();

@@ -10,3 +10,15 @@
 /Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.dll
 /Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.pdb
 /Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.genruntimeconfig.cache
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.dll
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.pdb
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.csprojAssemblyReference.cache
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.AssemblyInfoInputs.cache
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.AssemblyInfo.cs
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.csproj.CoreCompileInputs.cache
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.dll
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.pdb
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.deps.json
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.runtimeconfig.json
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.runtimeconfig.dev.json
+/Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.genruntimeconfig.cache
