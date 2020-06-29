@@ -52,7 +52,9 @@ namespace BDM.Lambda
                 app.UseHsts();
             }
             
-            app.UseCors(options => options.WithOrigins("http://localhost:4200").AllowAnyMethod());  //add consume app domain here
+            app.UseCors(options => options.WithOrigins("http://localhost:4200")
+                                                        .AllowAnyHeader()
+                                                        .AllowAnyMethod());  //add consume app domain here
 
             app.UseHttpsRedirection();
 
