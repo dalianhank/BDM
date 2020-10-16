@@ -71,6 +71,7 @@ namespace BDM.Data.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("ClientName")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("EmailAddress")
@@ -81,22 +82,13 @@ namespace BDM.Data.Migrations
                     b.Property<int>("EmailAddressType")
                         .HasColumnType("integer");
 
-                    b.Property<string>("ParentClientName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("ParentNPN")
-                        .HasColumnType("text");
-
-                    b.Property<string>("ParentNPN1")
                         .IsRequired()
                         .HasColumnType("character varying(30)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClientName");
-
-                    b.HasIndex("ParentClientName", "ParentNPN1");
+                    b.HasAlternateKey("ClientName", "ParentNPN", "EmailAddressType");
 
                     b.ToTable("Email");
                 });
@@ -120,7 +112,7 @@ namespace BDM.Data.Migrations
 
                     b.HasOne("BDM.Data.Model.Broker", "Parent")
                         .WithMany("EmailAddresses")
-                        .HasForeignKey("ParentClientName", "ParentNPN1")
+                        .HasForeignKey("ClientName", "ParentNPN")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

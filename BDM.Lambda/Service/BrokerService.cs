@@ -4,31 +4,37 @@ using DataObj = BDM.Data.Model;
 using BDM.Data.Concrete;
 using System.Linq;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using BDM.Data.Container;
 
 namespace BDM.Lambda.Service
 {
-    public class BrokerService : IBrokerService
+        public class BrokerService : IBrokerService
     {
-        private BDMEntitiesDB _db;
+        private BDMEntitiesDB _db;   
+        private IBrokerContainer _brokerContainer;     
         private IMapper _mapper;
 
-        public BrokerService(BDMEntitiesDB dB, IMapper mapper)
+
+        public BrokerService(BDMEntitiesDB dB, IMapper mapper, IBrokerContainer brokerContainer)
         {
-            _db = dB;
+            _db = dB;            
             _mapper = mapper;
+            _brokerContainer = brokerContainer;
         }
+
+        
         public List<ViewObj.Broker> GetBrokerList()
         {
-            var brokerlist = _db.Brokers;
+            List<DataObj.Broker> brokerlist = _db.Brokers
+                                                .Where(b =>b.ClientName == "ABC")
+                                                .Include(e => e.EmailAddresses)
+                                                .ToList();
 
-            //var brokers = new List<ViewObj.Broker>();            
-            // foreach (var data in brokerlist)
-            // {
-            //     brokers.Add(_mapper.Map<ViewObj.Broker>(data));
-            // }
-            //return brokers;
+            var brokers = _brokerContainer.GetListByClient("ABC");
 
-            return _mapper.Map<List<ViewObj.Broker>>(brokerlist);
+            return _mapper.Map<List<ViewObj.Broker>>(brokers);
+            
         }
     }
 }

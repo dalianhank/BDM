@@ -1,4 +1,5 @@
 using BDM.Lambda.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BDM.Lambda.Controllers
@@ -14,7 +15,8 @@ namespace BDM.Lambda.Controllers
             _brokerService = brokerService;
         }
 
-        [HttpGet]        
+        [HttpGet] 
+        //[Authorize]       
         public IActionResult GetBrokerList()
         {
             var result = _brokerService.GetBrokerList();

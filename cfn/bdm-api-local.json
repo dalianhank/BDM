@@ -1,0 +1,10 @@
+[
+        {
+            "ParameterKey": "ShouldCreateBucket",
+            "ParameterValue": "true"
+        },
+        {
+          "ParameterKey": "BucketName",
+          "ParameterValue": "flyhorse.bdmapi.cloudformation"
+        }
+]

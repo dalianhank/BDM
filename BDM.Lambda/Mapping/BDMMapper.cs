@@ -9,8 +9,9 @@ namespace BDM.Lambda.Mapping
     {
         public BDMMapper()
         {
-            CreateMap<DataObj.Broker, ViewObj.Broker>();
-            CreateMap<List<DataObj.Broker>, List<ViewObj.Broker>>();
+            CreateMap<DataObj.Broker, ViewObj.Broker>()                
+                .ForMember(s =>s.EmailAddresses, c => c.MapFrom(m => m.EmailAddresses));
+            CreateMap<DataObj.Email, ViewObj.Email>();
         }
     }
 }

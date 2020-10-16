@@ -122,3 +122,16 @@
 /Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Lambda/obj/Debug/netcoreapp3.1/staticwebassets/BDM.Lambda.StaticWebAssets.Manifest.cache
 /Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Lambda/obj/Debug/netcoreapp3.1/staticwebassets/BDM.Lambda.StaticWebAssets.xml
 /Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Lambda/obj/Debug/netcoreapp3.1/BDM.Lambda.genruntimeconfig.cache
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/obj/Debug/netcoreapp3.1/BDM.Lambda.MvcApplicationPartsAssemblyInfo.cs

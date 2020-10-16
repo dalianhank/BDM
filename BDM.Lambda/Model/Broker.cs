@@ -17,6 +17,6 @@ namespace BDM.Lambda.Model
         // public string MiddleName { get; set; }
         // public string Suffix { get; set; }
         // public string SSN { get; set; }
-        // public List<Email> EmailAddresses { get; set; }
+        public List<Email> EmailAddresses { get; set; }
     }
 }

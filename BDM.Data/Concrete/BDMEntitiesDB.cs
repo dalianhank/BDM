@@ -22,6 +22,10 @@ namespace BDM.Data.Concrete
             builder.Entity<Client>().HasKey(m => new { m.Name });
             builder.Entity<Broker>().HasKey(m => new { m.ClientName, m.NPN });
             builder.Entity<Broker>().HasOne<Client>(m => m.Client).WithMany(m => m.Brokers).HasForeignKey(m => new { m.ClientName });
+
+            builder.Entity<Email>().HasAlternateKey(m => new { m.ClientName, m.ParentNPN, m.EmailAddressType });
+            builder.Entity<Email>().HasOne<Client>(m => m.Client);
+            builder.Entity<Email>().HasOne<Broker>(m => m.Parent).WithMany(m => m.EmailAddresses).HasForeignKey(m => new { m.ClientName, m.ParentNPN });
         }
     }
 }
