@@ -138,6 +138,14 @@
               "target": "Package",
               "version": "[5.1.1, )"
             },
+            "AspNetCore.HealthChecks.NpgSql": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "AspNetCore.HealthChecks.UI.Client": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
             "AutoMapper": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -154,9 +162,17 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.AspNetCore.Diagnostics.HealthChecks": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks": {
+              "target": "Package",
+              "version": "[3.1.9, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",

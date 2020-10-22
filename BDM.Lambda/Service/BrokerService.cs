@@ -24,17 +24,22 @@ namespace BDM.Lambda.Service
         }
 
         
-        public List<ViewObj.Broker> GetBrokerList()
+        public List<ViewObj.Broker> GetBrokerList(string clientName)
         {
             List<DataObj.Broker> brokerlist = _db.Brokers
-                                                .Where(b =>b.ClientName == "ABC")
+                                                .Where(b =>b.ClientName == clientName)
                                                 .Include(e => e.EmailAddresses)
                                                 .ToList();
 
-            var brokers = _brokerContainer.GetListByClient("ABC");
+            var brokers = _brokerContainer.GetListByClient(clientName);
 
             return _mapper.Map<List<ViewObj.Broker>>(brokers);
             
+        }
+
+        public ViewObj.Broker GetBrokerByClientNPN(string clientName, string npn){
+            var broker = _brokerContainer.Get(clientName, npn);
+            return _mapper.Map<ViewObj.Broker>(broker);
         }
     }
 }

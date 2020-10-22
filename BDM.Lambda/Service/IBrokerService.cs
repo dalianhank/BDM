@@ -5,6 +5,8 @@ namespace BDM.Lambda.Service
 {
     public interface IBrokerService
     {
-         List<Broker> GetBrokerList();
+         List<Broker> GetBrokerList(string clientName);
+
+         Broker GetBrokerByClientNPN(string clientName, string npn);
     }
 }

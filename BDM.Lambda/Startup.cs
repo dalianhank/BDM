@@ -2,23 +2,21 @@ using AutoMapper;
 using BDM.Data.Concrete;
 using BDM.Data.Container;
 using BDM.Data.Ioc;
-using BDM.Data.Repository;
-using BDM.Data.UnitScope;
 using BDM.Lambda.Mapping;
 using BDM.Lambda.Service;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using DataObj = BDM.Data.Model;
 
 namespace BDM.Lambda
 {
-    public class Startup
+        public class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -56,7 +54,8 @@ namespace BDM.Lambda
 
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
-            services.AddDbContext<BDMEntitiesDB>(options => options.UseNpgsql("Server=localhost;User Id=tdadmin;Password=password;Database=BDMPGDatabase;Port=3306;"));
+            //services.AddDbContext<BDMEntitiesDB>(options => options.UseNpgsql("Server=localhost;User Id=tdadmin;Password=password;Database=BDMPGDatabase;Port=3306;"));
+            services.AddDbContext<BDMEntitiesDB>(options => options.UseNpgsql(Configuration["ConnectionStrings:DataAccessPGProvider"]));
             services.AddCors(); 
             //services.AddRepository<DataObj.Broker>(); 
             services.AddUnitScope<BDMEntitiesDB>(); 
@@ -67,6 +66,12 @@ namespace BDM.Lambda
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen();
+            services.AddHealthChecks()
+                .AddCheck("WebAPI", () => HealthCheckResult.Healthy(), new[]{"service"})
+                .AddNpgSql(Configuration["ConnectionStrings:DataAccessPGProvider"], 
+                            name: "database", 
+                            tags: new []{"database"});
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -98,7 +103,7 @@ namespace BDM.Lambda
 
             app.UseHttpsRedirection();
 
-            //app.UseRouting();
+            app.UseRouting();
             
             //app.UseAuthorization();
             
@@ -107,10 +112,21 @@ namespace BDM.Lambda
             app.UseMvc();
 
 
-            // app.UseEndpoints(endpoints =>
-            // {
-            //     endpoints.MapControllers();
-            // });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHealthChecks("/health/service", new HealthCheckOptions(){
+                        Predicate = _ =>_.Tags.Contains("service"),
+                        ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
+            });
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHealthChecks("/health/db", new HealthCheckOptions(){
+                        Predicate = _ =>_.Tags.Contains("database"),
+                        ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
+            });
         }
     }
 }

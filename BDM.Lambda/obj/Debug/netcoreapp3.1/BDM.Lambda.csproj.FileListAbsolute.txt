@@ -135,3 +135,10 @@
 /Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/gefeng/Projects/BDM/BDM.Lambda/obj/Debug/netcoreapp3.1/BDM.Lambda.MvcApplicationPartsAssemblyInfo.cs
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/HealthChecks.NpgSql.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Diagnostics.HealthChecks.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Hosting.Abstractions.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/HealthChecks.UI.Client.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/HealthChecks.UI.Core.dll
+/Users/gefeng/Projects/BDM/BDM.Lambda/bin/Debug/netcoreapp3.1/System.Text.Json.dll
