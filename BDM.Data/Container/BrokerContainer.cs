@@ -41,5 +41,65 @@ namespace BDM.Data.Container{
                 public IList<Broker> GetListByClient(string clientName){
                         return GetList(_ =>_.ClientName == clientName);
                 }
+
+                public void AddBrokerByClientNPN(string clientName, string NPN, Broker broker)
+                {
+                        broker.ClientName = clientName;
+                        broker.NPN = NPN;
+                        _brokerRepository.Add(broker);
+                        _unitScope.SaveChanges();
+                }
+
+                public void UpdateBrokerByClientNPN(string clientName, string NPN, Broker broker)
+                {
+                        var dbBroker = Get(clientName, NPN, false);
+                        if(dbBroker != null){
+                                MergeBroker(broker, dbBroker);
+                                _unitScope.SaveChanges();
+                        }
+                        else{
+                                AddBrokerByClientNPN(clientName,NPN, broker);
+                        }
+                }
+
+                public void DeleteBrokerByClientNPN(string clientName, string NPN)
+                {
+                        var dbBroker = Get(clientName, NPN, false);
+                        if(dbBroker != null){
+                                _brokerRepository.Delete(dbBroker);
+                                _unitScope.SaveChanges();
+                        }
+                        
+                }
+                
+                private static void MergeBroker(Broker source, Broker target){
+                        target.FirstName = source.FirstName;
+                        target.LastName = source.LastName;
+                        target.MiddleName = source.MiddleName;
+                        target.Suffix = source.Suffix;
+                        target.DateOfBirth = source.DateOfBirth;
+                        target.SSN = source.SSN;
+                        if(target.EmailAddresses == null) target.EmailAddresses = new List<Email>();
+                        MergeEmails(source.EmailAddresses, target.EmailAddresses);
+                }
+
+                private static void MergeEmails(List<Email> source, List<Email> target)
+                {
+                        foreach (var sourceItem in source)
+                        {
+                                var targetItem = target.FirstOrDefault(_ => _.Id == sourceItem.Id ||
+                                                                                _.EmailAddressType == sourceItem.EmailAddressType);
+
+                                if (targetItem != null)
+                                {
+                                        targetItem.EmailAddress = sourceItem.EmailAddress;
+                                        targetItem.EmailAddressType = sourceItem.EmailAddressType;
+                                }
+                                else
+                                {
+                                        target.Add(sourceItem);
+                                }
+                        }
+                }
         }
 }

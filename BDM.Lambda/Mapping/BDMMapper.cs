@@ -12,6 +12,10 @@ namespace BDM.Lambda.Mapping
             CreateMap<DataObj.Broker, ViewObj.Broker>()                
                 .ForMember(s =>s.EmailAddresses, c => c.MapFrom(m => m.EmailAddresses));
             CreateMap<DataObj.Email, ViewObj.Email>();
+
+            CreateMap<ViewObj.Broker, DataObj.Broker>()
+                .ForMember(s =>s.EmailAddresses, c => c.MapFrom(m =>m.EmailAddresses));
+            CreateMap<ViewObj.Email, DataObj.Email>();
         }
     }
 }

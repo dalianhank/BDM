@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using BDM.Data.Concrete;
 using BDM.Data.Repository;
+using Microsoft.EntityFrameworkCore;
 
 namespace BDM.Data.UnitScope
 {
@@ -24,5 +26,41 @@ namespace BDM.Data.UnitScope
                 }
 
                 public TContext Context { get; set; }
+
+                public void SaveChanges()
+                {
+                        using (var transaction = Context.Database.BeginTransaction())
+                        {
+                                try
+                                {
+                                        Context.SaveChanges();
+                                        transaction.Commit();
+                                }
+                                catch
+                                {
+                                        transaction.Rollback();
+                                        throw;
+                                }
+                                finally
+                                {
+                                        DetachAllEntities();
+                                }
+                        }
+                }
+
+                public void Dispose()
+                {
+                        Context?.Dispose();
+                }
+
+                private void DetachAllEntities()
+                {
+                        var changedEntriesCopy = Context.ChangeTracker.Entries().ToList();
+
+                        foreach (var entity in changedEntriesCopy)
+                        {
+                                Context.Entry(entity.Entity).State = EntityState.Detached;
+                        }
+                }
         }
 }

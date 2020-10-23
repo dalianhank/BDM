@@ -9,6 +9,7 @@ namespace BDM.Data.UnitScope
         TContext Context { get; set; }
 
         IRepository<T> GetRepository<T>() where T : class;
+        void SaveChanges();
     
     }
 }

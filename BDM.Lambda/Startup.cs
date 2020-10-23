@@ -60,7 +60,7 @@ namespace BDM.Lambda
             //services.AddRepository<DataObj.Broker>(); 
             services.AddUnitScope<BDMEntitiesDB>(); 
 
-            
+                       
             
             services.AddMvc(option => option.EnableEndpointRouting = false);
 

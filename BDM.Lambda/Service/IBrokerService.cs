@@ -8,5 +8,11 @@ namespace BDM.Lambda.Service
          List<Broker> GetBrokerList(string clientName);
 
          Broker GetBrokerByClientNPN(string clientName, string npn);
+
+         void AddBrokerByClientNPN(string clientName, string npn, Broker broker);
+
+         void UpdateBrokerByClientNPN(string clientName, string npn, Broker broker);
+
+         void DeleteBrokerByClientNPN(string clientName, string npn);
     }
 }

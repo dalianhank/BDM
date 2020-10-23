@@ -91,6 +91,15 @@ namespace BDM.Data.Repository
             return _dbSet.Find(id);
         }
 
+        public void Add(T entity)
+        {
+            _dbSet.Add(entity);
+        }
+
+        public void Add(params T[] entities) => _dbSet.AddRange(entities);
+
+        public void Add(IEnumerable<T> entities) => _dbSet.AddRange(entities);
+        
         public void Insert(T entity)
         {
             _dbSet.Add(entity);
@@ -107,9 +116,19 @@ namespace BDM.Data.Repository
             _dbSet.Remove(entityToDelete);
         }
 
-        public void Update(T entityToUpdate)
+        public void Update(T entity)
         {
-            _dbSet.Update(entityToUpdate);
+            _dbSet.Update(entity);
+        }
+
+        public void Update(params T[] entities)
+        {
+            _dbSet.UpdateRange(entities);
+        }
+
+        public void Update(IEnumerable<T> entities)
+        {
+            _dbSet.UpdateRange(entities);
         }
     }
 }

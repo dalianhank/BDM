@@ -37,9 +37,27 @@ namespace BDM.Lambda.Service
             
         }
 
-        public ViewObj.Broker GetBrokerByClientNPN(string clientName, string npn){
+        public ViewObj.Broker GetBrokerByClientNPN(string clientName, string npn)
+        {
             var broker = _brokerContainer.Get(clientName, npn);
             return _mapper.Map<ViewObj.Broker>(broker);
+        }
+
+        public void AddBrokerByClientNPN(string clientName, string npn, ViewObj.Broker broker)
+        {
+            var dataBroker = _mapper.Map<DataObj.Broker>(broker);
+            _brokerContainer.AddBrokerByClientNPN(clientName, npn, dataBroker);
+        }
+
+        public void UpdateBrokerByClientNPN(string clientName, string npn, ViewObj.Broker broker)
+        {
+            var dataBroker = _mapper.Map<DataObj.Broker>(broker);
+            _brokerContainer.UpdateBrokerByClientNPN(clientName, npn, dataBroker);
+        }
+
+        public void DeleteBrokerByClientNPN(string clientName, string npn)
+        {
+            _brokerContainer.DeleteBrokerByClientNPN(clientName, npn);
         }
     }
 }
