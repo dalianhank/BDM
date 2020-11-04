@@ -17,7 +17,7 @@ namespace BDM.Lambda.Controllers
         }
 
         [HttpGet] 
-        //[Authorize]
+        [Authorize]
         [Route("/Clients/{clientName}")]       
         public IActionResult GetBrokerList(string clientName)
         {
@@ -25,7 +25,7 @@ namespace BDM.Lambda.Controllers
             return Ok(result);
         }
         [HttpGet] 
-        //[Authorize]
+        [Authorize]
         [Route("/Clients/{clientName}/NPN/{npn}")]       
         public IActionResult GetBrokeByClientNPN(string clientName, string npn)
         {
@@ -34,6 +34,7 @@ namespace BDM.Lambda.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [Route("/Clients/{clientName}/NPN/{npn}")] 
         public IActionResult CreateBroker(ViewObj.Broker broker)
         {
@@ -42,6 +43,7 @@ namespace BDM.Lambda.Controllers
         }
 
         [HttpPut]
+        [Authorize]
         [Route("/Clients/{clientName}/NPN/{npn}")] 
         public IActionResult UpdateBroker(ViewObj.Broker broker)
         {
@@ -50,6 +52,7 @@ namespace BDM.Lambda.Controllers
         }
 
         [HttpDelete]
+        [Authorize]
         [Route("/Clients/{clientName}/NPN/{npn}")] 
         public IActionResult DeleteBroker(string clientName, string npn)
         {

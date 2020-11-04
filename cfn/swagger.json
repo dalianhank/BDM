@@ -1,0 +1,256 @@
+{
+        "openapi": "3.0.1",
+        "info": {
+          "title": "BDM.Lambda",
+          "version": "1.0"
+        },
+        "paths": {
+          "/Clients/{clientName}": {
+            "get": {
+              "tags": [
+                "Broker"
+              ],
+              "parameters": [
+                {
+                  "name": "clientName",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Success"
+                }
+              }
+            }
+          },
+          "/Clients/{clientName}/NPN/{npn}": {
+            "get": {
+              "tags": [
+                "Broker"
+              ],
+              "parameters": [
+                {
+                  "name": "clientName",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "npn",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Success"
+                }
+              }
+            },
+            "post": {
+              "tags": [
+                "Broker"
+              ],
+              "parameters": [
+                {
+                  "name": "clientName",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "name": "npn",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Broker"
+                    }
+                  },
+                  "text/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Broker"
+                    }
+                  },
+                  "application/*+json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Broker"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Success"
+                }
+              }
+            },
+            "put": {
+              "tags": [
+                "Broker"
+              ],
+              "parameters": [
+                {
+                  "name": "clientName",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "name": "npn",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Broker"
+                    }
+                  },
+                  "text/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Broker"
+                    }
+                  },
+                  "application/*+json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Broker"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Success"
+                }
+              }
+            },
+            "delete": {
+              "tags": [
+                "Broker"
+              ],
+              "parameters": [
+                {
+                  "name": "clientName",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "npn",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Success"
+                }
+              }
+            }
+          }
+        },
+        "components": {
+          "schemas": {
+            "Email": {
+              "type": "object",
+              "properties": {
+                "clientName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "emailAddressType": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "emailAddress": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "additionalProperties": false
+            },
+            "Broker": {
+              "type": "object",
+              "properties": {
+                "clientName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "npn": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "firstName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "lastName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "dateOfBirth": {
+                  "type": "string",
+                  "format": "date-time",
+                  "nullable": true
+                },
+                "middleName": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "suffix": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "ssn": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "emailAddresses": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Email"
+                  },
+                  "nullable": true
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        }
+      }

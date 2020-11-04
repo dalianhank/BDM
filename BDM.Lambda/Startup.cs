@@ -1,3 +1,4 @@
+using System.Text;
 using AutoMapper;
 using BDM.Data.Concrete;
 using BDM.Data.Container;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BDM.Lambda
 {
@@ -29,19 +31,19 @@ namespace BDM.Lambda
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddAuthentication("OAuth")
-            //     .AddJwtBearer("OAuth", config =>
-            //     {
-            //         var secretBytes = Encoding.UTF8.GetBytes("not_too_short_secret_otherwise_it_might_error");
-            //         var key = new SymmetricSecurityKey(secretBytes);
+            services.AddAuthentication("OAuth")
+                .AddJwtBearer("OAuth", config =>
+                {
+                    var secretBytes = Encoding.UTF8.GetBytes("not_too_short_secret_otherwise_it_might_error");
+                    var key = new SymmetricSecurityKey(secretBytes);
                     
-            //         config.TokenValidationParameters = new TokenValidationParameters()
-            //         {
-            //             IssuerSigningKey = key,
-            //             ValidateIssuer = false,
-            //             ValidateAudience = false                         
-            //         };
-            //     });
+                    config.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        IssuerSigningKey = key,
+                        ValidateIssuer = false,
+                        ValidateAudience = false                         
+                    };
+                });
        
             services.AddTransient<IBrokerService, BrokerService>();
             services.AddTransient<IBrokerContainer, BrokerContainer>();
@@ -105,9 +107,9 @@ namespace BDM.Lambda
 
             app.UseRouting();
             
-            //app.UseAuthorization();
+            app.UseAuthorization();
             
-            //app.UseAuthentication();
+            app.UseAuthentication();
 
             app.UseMvc();
 
