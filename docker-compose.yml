@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  bdm.lambda:
+    image: ${DOCKER_REGISTRY-}bdmlambda
+    build:
+      context: .
+      dockerfile: BDM.Lambda/Dockerfile

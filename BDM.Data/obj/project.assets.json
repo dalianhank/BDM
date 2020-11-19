@@ -2324,12 +2324,11 @@
       ]
     },
     "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "DloMk88juo0OuOWr56QG7MNchmafTLYWvABy36izkrLI5VledI0rq28KGs1i9wbpeT9NPQrx/wTf8U2vazqQ3Q==",
+      "sha512": "jwjwlEL0Elv6gwoyaokRn12nv/JE+UW/DXJEbzhjCPvGbef36StnHKc9XaZD/rGWqYicrphZ7eumR/jdmNcjRg==",
       "type": "package",
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -5587,28 +5586,36 @@
     ]
   },
   "packageFolders": {
-    "/Users/gefeng/.nuget/packages/": {}
+    "C:\\Users\\gefen\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gefeng/Projects/BDM/BDM.Data/BDM.Data.csproj",
+      "projectUniqueName": "C:\\Users\\gefen\\github\\BDM\\BDM.Data\\BDM.Data.csproj",
       "projectName": "BDM.Data",
-      "projectPath": "/Users/gefeng/Projects/BDM/BDM.Data/BDM.Data.csproj",
-      "packagesPath": "/Users/gefeng/.nuget/packages/",
-      "outputPath": "/Users/gefeng/Projects/BDM/BDM.Data/obj/",
+      "projectPath": "C:\\Users\\gefen\\github\\BDM\\BDM.Data\\BDM.Data.csproj",
+      "packagesPath": "C:\\Users\\gefen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gefen\\github\\BDM\\BDM.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/Users/gefeng/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\gefen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -5620,6 +5627,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -5675,7 +5683,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.64
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDM.Data", "BDM.Data\BDM.Data.csproj", "{16A7CAE1-48B0-4866-84A1-5723E066B570}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BDM.Data", "BDM.Data\BDM.Data.csproj", "{16A7CAE1-48B0-4866-84A1-5723E066B570}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDM.Lambda", "BDM.Lambda\BDM.Lambda.csproj", "{6B56DED8-2BAC-4D89-AE65-2B121900C6A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BDM.Lambda", "BDM.Lambda\BDM.Lambda.csproj", "{6B56DED8-2BAC-4D89-AE65-2B121900C6A7}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E690167D-45F7-4187-858D-70E285A0BE03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{16A7CAE1-48B0-4866-84A1-5723E066B570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,5 +43,23 @@ Global
 		{6B56DED8-2BAC-4D89-AE65-2B121900C6A7}.Release|x64.Build.0 = Release|Any CPU
 		{6B56DED8-2BAC-4D89-AE65-2B121900C6A7}.Release|x86.ActiveCfg = Release|Any CPU
 		{6B56DED8-2BAC-4D89-AE65-2B121900C6A7}.Release|x86.Build.0 = Release|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Debug|x64.Build.0 = Debug|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Debug|x86.Build.0 = Debug|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Release|x64.ActiveCfg = Release|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Release|x64.Build.0 = Release|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Release|x86.ActiveCfg = Release|Any CPU
+		{E690167D-45F7-4187-858D-70E285A0BE03}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26DC2F92-CD0E-41C4-942E-44FF775EA925}
 	EndGlobalSection
 EndGlobal
