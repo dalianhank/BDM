@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gefen\\github\\BDM\\BDM.Lambda\\BDM.Lambda.csproj": {}
+    "/Users/gefeng/Projects/BDM/BDM.Lambda/BDM.Lambda.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gefen\\github\\BDM\\BDM.Data\\BDM.Data.csproj": {
+    "/Users/gefeng/Projects/BDM/BDM.Data/BDM.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gefen\\github\\BDM\\BDM.Data\\BDM.Data.csproj",
+        "projectUniqueName": "/Users/gefeng/Projects/BDM/BDM.Data/BDM.Data.csproj",
         "projectName": "BDM.Data",
-        "projectPath": "C:\\Users\\gefen\\github\\BDM\\BDM.Data\\BDM.Data.csproj",
-        "packagesPath": "C:\\Users\\gefen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gefen\\github\\BDM\\BDM.Data\\obj\\",
+        "projectPath": "/Users/gefeng/Projects/BDM/BDM.Data/BDM.Data.csproj",
+        "packagesPath": "/Users/gefeng/.nuget/packages/",
+        "outputPath": "/Users/gefeng/Projects/BDM/BDM.Data/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gefen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/gefeng/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -98,40 +92,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gefen\\github\\BDM\\BDM.Lambda\\BDM.Lambda.csproj": {
+    "/Users/gefeng/Projects/BDM/BDM.Lambda/BDM.Lambda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gefen\\github\\BDM\\BDM.Lambda\\BDM.Lambda.csproj",
+        "projectUniqueName": "/Users/gefeng/Projects/BDM/BDM.Lambda/BDM.Lambda.csproj",
         "projectName": "BDM.Lambda",
-        "projectPath": "C:\\Users\\gefen\\github\\BDM\\BDM.Lambda\\BDM.Lambda.csproj",
-        "packagesPath": "C:\\Users\\gefen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gefen\\github\\BDM\\BDM.Lambda\\obj\\",
+        "projectPath": "/Users/gefeng/Projects/BDM/BDM.Lambda/BDM.Lambda.csproj",
+        "packagesPath": "/Users/gefeng/.nuget/packages/",
+        "outputPath": "/Users/gefeng/Projects/BDM/BDM.Lambda/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gefen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/gefeng/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\gefen\\github\\BDM\\BDM.Data\\BDM.Data.csproj": {
-                "projectPath": "C:\\Users\\gefen\\github\\BDM\\BDM.Data\\BDM.Data.csproj"
+              "/Users/gefeng/Projects/BDM/BDM.Data/BDM.Data.csproj": {
+                "projectPath": "/Users/gefeng/Projects/BDM/BDM.Data/BDM.Data.csproj"
               }
             }
           }
@@ -221,7 +209,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
