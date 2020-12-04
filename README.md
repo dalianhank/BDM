@@ -4,6 +4,8 @@ This project is built by using .net core, EF Core, Postgresql and docker. It int
 
 
 # Screen - Shot
-![Alt text]( /Users/gefeng/Projects/BDM/image/S1.png "Swagger UI")
-![Alt text]( /Users/gefeng/Projects/BDM/image/S2.png "JWT token")
-![Alt text]( /Users/gefeng/Projects/BDM/image/S3.png "Http GET")
+![Alt text]( /image/S1.png "Swagger UI")
+
+![Alt text]( /image/S2.png "JWT token")
+
+![Alt text]( /image/S3.png "Http GET")
