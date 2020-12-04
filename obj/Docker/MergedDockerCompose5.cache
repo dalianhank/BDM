@@ -1,0 +1,18 @@
+services:
+  bdm.lambda:
+    build:
+      context: /Users/gefeng/Projects/BDM
+      dockerfile: BDM.Lambda/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://localhost;http://locahost
+    image: bdmlambda
+    ports:
+    - published: 52300
+      target: 80
+    - published: 52301
+      target: 443
+    volumes:
+    - /Users/gefeng/ASP.NET/Https:/root/.aspnet/https:ro
+    - /Users/gefeng/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

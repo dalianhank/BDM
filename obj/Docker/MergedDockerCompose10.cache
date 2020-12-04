@@ -1,0 +1,26 @@
+networks:
+  bdm-network:
+    driver: bridge
+services:
+  bdm.lambda:
+    build:
+      context: /Users/gefeng/Projects/BDM
+      dockerfile: BDM.Lambda/Dockerfile
+    image: bdmlambda
+    networks:
+      bdm-network: null
+    ports:
+    - published: 5000
+      target: 80
+  broker.data:
+    container_name: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: admin
+    image: postgres
+    networks:
+      bdm-network: null
+    ports:
+    - published: 3306
+      target: 5432
+version: '3.5'

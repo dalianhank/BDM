@@ -1,3 +1,4 @@
+using System;
 using System.Text;
 using AutoMapper;
 using BDM.Data.Concrete;
@@ -15,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 namespace BDM.Lambda
 {
@@ -56,8 +58,15 @@ namespace BDM.Lambda
 
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
-            //services.AddDbContext<BDMEntitiesDB>(options => options.UseNpgsql("Server=localhost;User Id=tdadmin;Password=password;Database=BDMPGDatabase;Port=3306;"));
+            //services.AddDbContext<BDMEntitiesDB>(options => options.UseNpgsql("Server=localhost;User Id=admin;Password=password;Database=BDMPGDatabase;Port=3306;"));
             services.AddDbContext<BDMEntitiesDB>(options => options.UseNpgsql(Configuration["ConnectionStrings:DataAccessPGProvider"]));
+            var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
+            // services.AddDbContext<BDMEntitiesDB>(options =>
+            //                                         options.UseNpgsql(
+            //                                                 connectionString
+            //                                                 )
+            //                                     );
+            
             services.AddCors(); 
             //services.AddRepository<DataObj.Broker>(); 
             services.AddUnitScope<BDMEntitiesDB>(); 
@@ -67,10 +76,40 @@ namespace BDM.Lambda
             services.AddMvc(option => option.EnableEndpointRouting = false);
 
             // Register the Swagger generator, defining 1 or more Swagger documents
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(options =>
+                {
+                    var securityScheme = new OpenApiSecurityScheme()
+                    {
+                        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                        Name = "Authorization",
+                        In = ParameterLocation.Header,
+                        Type = SecuritySchemeType.Http,
+                        Scheme = "bearer",
+                        BearerFormat = "JWT" // Optional
+                    };
+
+                    var securityRequirement = new OpenApiSecurityRequirement
+                    {
+                        {
+                            new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "bearerAuth"
+                                }
+                            },
+                            new string[] {}
+                        }
+                    };
+
+                    options.AddSecurityDefinition("bearerAuth", securityScheme);
+                    options.AddSecurityRequirement(securityRequirement);
+            });
+
             services.AddHealthChecks()
                 .AddCheck("WebAPI", () => HealthCheckResult.Healthy(), new[]{"service"})
-                .AddNpgSql(Configuration["ConnectionStrings:DataAccessPGProvider"], 
+                .AddNpgSql(connectionString, 
                             name: "database", 
                             tags: new []{"database"});
             

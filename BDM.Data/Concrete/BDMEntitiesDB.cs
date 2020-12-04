@@ -11,7 +11,7 @@ namespace BDM.Data.Concrete
 
         public BDMEntitiesDB(DbContextOptions<BDMEntitiesDB> options) : base(options) { }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseNpgsql("Server=localhost;User Id=tdadmin;Password=password;Database=BDMPGDatabase;Port=3306;");
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseNpgsql("host=postgres;User Id=admin;Password=password;Database=postgres;Port=5432;");
 
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Broker> Brokers { get; set; }

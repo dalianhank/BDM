@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "DataAccessPGProvider": "Server=localhost;User Id=tdadmin;Password=password;Database=BDMPGDatabase;Port=3306;"
+    "DataAccessPGProvider": "Server=localhost;User Id=admin;Password=password;Database=postgres;Port=3306;"
   }
 }

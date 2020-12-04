@@ -1,15 +1,3 @@
-/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.deps.json
-/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.runtimeconfig.json
-/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.runtimeconfig.dev.json
-/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.dll
-/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.pdb
-/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.csprojAssemblyReference.cache
-/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.csproj.CoreCompileInputs.cache
-/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.AssemblyInfoInputs.cache
-/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.AssemblyInfo.cs
-/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.dll
-/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.pdb
-/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.genruntimeconfig.cache
 /Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.dll
 /Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.pdb
 /Volumes/SSD OS System/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.csprojAssemblyReference.cache
@@ -34,15 +22,27 @@
 /Users/gefeng/Projects/BDMAPI/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.dll
 /Users/gefeng/Projects/BDMAPI/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.pdb
 /Users/gefeng/Projects/BDMAPI/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.genruntimeconfig.cache
-C:\Users\gefen\github\BDM\BDM.Data\bin\Debug\netcoreapp3.1\BDM.Data.deps.json
-C:\Users\gefen\github\BDM\BDM.Data\bin\Debug\netcoreapp3.1\BDM.Data.runtimeconfig.json
-C:\Users\gefen\github\BDM\BDM.Data\bin\Debug\netcoreapp3.1\BDM.Data.runtimeconfig.dev.json
-C:\Users\gefen\github\BDM\BDM.Data\bin\Debug\netcoreapp3.1\BDM.Data.dll
-C:\Users\gefen\github\BDM\BDM.Data\bin\Debug\netcoreapp3.1\BDM.Data.pdb
-C:\Users\gefen\github\BDM\BDM.Data\obj\Debug\netcoreapp3.1\BDM.Data.csprojAssemblyReference.cache
-C:\Users\gefen\github\BDM\BDM.Data\obj\Debug\netcoreapp3.1\BDM.Data.AssemblyInfoInputs.cache
-C:\Users\gefen\github\BDM\BDM.Data\obj\Debug\netcoreapp3.1\BDM.Data.AssemblyInfo.cs
-C:\Users\gefen\github\BDM\BDM.Data\obj\Debug\netcoreapp3.1\BDM.Data.csproj.CoreCompileInputs.cache
-C:\Users\gefen\github\BDM\BDM.Data\obj\Debug\netcoreapp3.1\BDM.Data.dll
-C:\Users\gefen\github\BDM\BDM.Data\obj\Debug\netcoreapp3.1\BDM.Data.pdb
-C:\Users\gefen\github\BDM\BDM.Data\obj\Debug\netcoreapp3.1\BDM.Data.genruntimeconfig.cache
+C:/Users/gefen/github/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.deps.json
+C:/Users/gefen/github/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.runtimeconfig.json
+C:/Users/gefen/github/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.runtimeconfig.dev.json
+C:/Users/gefen/github/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.dll
+C:/Users/gefen/github/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.pdb
+C:/Users/gefen/github/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.csprojAssemblyReference.cache
+C:/Users/gefen/github/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.AssemblyInfoInputs.cache
+C:/Users/gefen/github/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.AssemblyInfo.cs
+C:/Users/gefen/github/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.csproj.CoreCompileInputs.cache
+C:/Users/gefen/github/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.dll
+C:/Users/gefen/github/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.pdb
+C:/Users/gefen/github/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.genruntimeconfig.cache
+/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.deps.json
+/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.runtimeconfig.json
+/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.runtimeconfig.dev.json
+/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.dll
+/Users/gefeng/Projects/BDM/BDM.Data/bin/Debug/netcoreapp3.1/BDM.Data.pdb
+/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.csprojAssemblyReference.cache
+/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.AssemblyInfoInputs.cache
+/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.AssemblyInfo.cs
+/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.csproj.CoreCompileInputs.cache
+/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.dll
+/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.pdb
+/Users/gefeng/Projects/BDM/BDM.Data/obj/Debug/netcoreapp3.1/BDM.Data.genruntimeconfig.cache
